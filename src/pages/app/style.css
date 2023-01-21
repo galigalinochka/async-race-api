@@ -1,6 +1,7 @@
 
 .body {
   background-color: #000000;
+  border-radius: 10px;
 }
 
 .container {
@@ -13,11 +14,12 @@
 }
 
 .header {
-  border: 1px solid red;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
   height: 7%;
   margin: 0 auto;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .header-container {
@@ -40,7 +42,6 @@
   text-align: center;
   height: 20px;
   line-height: 20px;
-  margin-bottom: 10px;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -50,6 +51,65 @@
   outline: 0 none;
   background-color: #c9c0c0;
 }
+
+.settings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.input-block,
+.update-block,
+.buttons-container {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-create-car,
+.input-update-car {
+  margin: 10px;
+  height: 20px;
+}
+
+.buttons-container .button:first-child {
+  width: 25%;
+}
+
+.buttons-container .button:nth-child(2) {
+  width: 25%;
+}
+
+.buttons-container .button:last-child {
+  width: 40%;
+}
+
+h2, h3 {
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+
+.main {
+  height: 80%;
+}
+
+.cars-container {
+  height: 80%;
+  margin-bottom: 20px;
+}
+
+.pagination-container {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 
 
 

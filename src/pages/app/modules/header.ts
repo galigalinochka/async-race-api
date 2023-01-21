@@ -1,5 +1,5 @@
 //import { CreateElem } from "../../../general/components/index";
-import { Button } from "../../../general/components/index";
+import { Button } from "../../../general/components/ui";
 import { Component } from "../../../general/components/components";
 
 const Buttons = [
@@ -16,10 +16,7 @@ class Header extends Component {
     const buttons = document.createElement("div");
     buttons.className = "header-container";
     Buttons.forEach((elem) => {
-      const buttonElem = new Button(
-        "button",
-        "button-link"
-      ).render() as HTMLElement;
+      const buttonElem = new Button("button", "button").render() as HTMLElement;
       buttonElem.id = `${elem.id}`;
       buttonElem.innerText = `${elem.text}`;
       buttons.append(buttonElem);
@@ -29,6 +26,7 @@ class Header extends Component {
 
   render() {
     this.renderHeader();
+
     return this.container;
   }
 }
