@@ -1,10 +1,6 @@
 import "./style.css";
 import "./fonts/fonts.css";
+import { App } from "./pages/app/index";
 
-function component(text: string) {
-  const element = document.createElement("h1");
-  element.textContent = text;
-  return element;
-}
-
-document.body.prepend(component("Проект собран на Webpack"));
+const app = new App();
+app.run();
