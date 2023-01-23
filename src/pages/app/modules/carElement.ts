@@ -1,7 +1,7 @@
 //import { API } from "./API";
 import { Component } from "../../../general/components/components";
 import { Button } from "../../../general/components/ui";
-import { carInnerHTML } from "../../../general/components/car";
+import { carInnerHTML, flagInnerHTML } from "../../../general/components/car";
 
 export class CarElement extends Component {
   id: string;
@@ -50,11 +50,13 @@ export class CarElement extends Component {
       "button-remove",
       CarElement.buttonText.remove
     ).render();
+    removeButton.classList.add("button");
     const selectButton = new Button(
       "button",
       "button-select",
       CarElement.buttonText.select
     ).render();
+    selectButton.classList.add("button");
 
     const btnContainer = document.createElement("div");
     btnContainer.className = "car-buttons-container";
@@ -86,15 +88,24 @@ export class CarElement extends Component {
     return carImg;
   }
 
+  createFlag() {
+    const flag = document.createElement("div");
+    flag.className = "flag";
+    flag.innerHTML = flagInnerHTML;
+
+    return flag;
+  }
+
   createCarControlBlock() {
     const carControl = document.createElement("div");
     carControl.className = "car-control-container";
     const carImg = this.createCarImage();
     this.image = carImg;
+    const flag = this.createFlag();
     carControl.prepend(this.startButton);
     carControl.append(this.stopButton);
     carControl.append(carImg);
-
+    carControl.append(flag);
     this.container.append(carControl);
 
     return carControl;

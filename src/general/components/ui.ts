@@ -64,6 +64,7 @@ class InputBlock extends Component {
 
     this.inputColor = document.createElement("input");
     this.inputColor.type = "color";
+    this.inputColor.value = "#ffffff";
 
     this.button = new Button(
       "button",

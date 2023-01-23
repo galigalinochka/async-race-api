@@ -32,25 +32,36 @@
 .button {
   background-color: #FFFFFF;
   border: 1px solid #FFFFFF;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset;
-  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  box-shadow: 1px 5px 1px 1px rgba(70, 116, 47, 0.9);
   border-radius: 4px;
   color: #555555;
   display: block;
   width: 120px;
   margin: 10px;
   font-size: 14px;
+  font-weight: 700;
   text-align: center;
   height: 20px;
   line-height: 20px;
   text-decoration: none;
   display: flex;
   justify-content: center;
+  outline: none;
+  transition: 0.5s;
 }
 
 .button:hover {
-  outline: 0 none;
+  outline: none;
   background-color: #c9c0c0;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.header-container .button,
+.buttons-container #race-button,
+.buttons-container #reset-button {
+  background-color: #9cf09b;
+  border: 1px solid #9cf09b;
 }
 
 .settings {
@@ -64,29 +75,29 @@
 .input-block,
 .update-block,
 .buttons-container {
-  width: 20%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+}
+
+input[type="color"] {
+  color: #FFFFFF;
 }
 
 .input-create-car,
 .input-update-car {
   margin: 10px;
   height: 20px;
-}
-
-.buttons-container .button:first-child {
-  width: 25%;
-}
-
-.buttons-container .button:nth-child(2) {
-  width: 25%;
+  outline: none;
 }
 
 .buttons-container .button:last-child {
-  width: 40%;
+  width: 160px;
+}
+
+.main-container {
+  margin-bottom: 30px;
 }
 
 h2, h3 {
@@ -119,6 +130,55 @@ svg {
   height: 70px;
 }
 
+.car-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.car-name {
+  margin-left: 10px;
+  color: #e3c814;
+}
+
+.car-control-container {
+  border-bottom: 3px dashed #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.car-element {
+  margin: 10px 10px 0 10px;
+}
+
+.button-control {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  box-shadow: 1px 1px 1px 1px rgba(207, 242, 7,0.9);
+  color: #cdf008;
+  border: 1px solid #FFFFFF;
+}
+
+.button-control:hover {
+  outline: none;
+  background-color: #000000;
+  border: 2px solid #cdf008;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.flag {
+  margin-left: auto;
+}
 
 

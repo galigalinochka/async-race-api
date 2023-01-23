@@ -59,4 +59,18 @@ width="72.248909mm">
 </g>
 </svg>`;
 
-export { carInnerHTML };
+const flagInnerHTML = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="491" height="601" viewBox="0, 0, 491, 601">
+<g id="Layer_1">
+  <g>
+    <path d="M1.5,1.5 L16.5,1.5 L16.5,600.5 L1.5,600.5 L1.5,1.5 z" fill="#FFFFFF"/>
+    <path d="M1.5,1.5 L16.5,1.5 L16.5,600.5 L1.5,600.5 L1.5,1.5 z" fill-opacity="0" stroke="#5A5858" stroke-width="1"/>
+  </g>
+  <path d="M10.5,14.5 L10.5,592.5" fill-opacity="0" stroke="#5A5858" stroke-width="3" stroke-linecap="round" opacity="0.27"/>
+  <g>
+    <path d="M18.5,14.5 L490.5,14.5 L490.5,307.5 L18.5,307.5 L18.5,14.5 z" fill="#FF0000"/>
+    <path d="M18.5,14.5 L490.5,14.5 L490.5,307.5 L18.5,307.5 L18.5,14.5 z" fill-opacity="0" stroke="#151515" stroke-width="1"/>
+  </g>
+</g>
+</svg>`;
+
+export { carInnerHTML, flagInnerHTML };
