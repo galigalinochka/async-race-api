@@ -20,6 +20,7 @@
   margin: 0 auto;
   width: 100%;
   margin-bottom: 25px;
+  display: flex;
 }
 
 .header-container {
@@ -110,6 +111,13 @@ h2, h3 {
   align-items: center;
 }
 
+.car-name {
+  color: #FFFFFF;
+}
+
+svg {
+  height: 70px;
+}
 
 
 

@@ -3,6 +3,8 @@ import {
   UpdateInput,
   Button,
 } from "../../../general/components/ui";
+//import { CarElement } from "./carElement";
+//import { CarsBlock } from "./carsBlock";
 import { Component } from "../../../general/components/components";
 
 const Buttons = [
@@ -42,6 +44,7 @@ class Settings extends Component {
     this.renderInputBlock();
     this.renderUpdateBlock();
     this.renderButtonsBlock();
+
     return this.container;
   }
 }

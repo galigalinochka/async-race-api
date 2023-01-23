@@ -1,5 +1,5 @@
 import { Component } from "../../../general/components/components";
-import { CreateCarBlock } from "./createCarBlock";
+import { CarsBlock } from "./carsBlock";
 import { Button } from "../../../general/components/ui";
 
 class Main extends Component {
@@ -18,9 +18,9 @@ class Main extends Component {
     this.container.append(subTitle);
   }
 
-  renderCarBlock() {
-    const carsBlock = new CreateCarBlock("div", "cars-container").render();
-    this.container.append(carsBlock);
+  renderCars() {
+    const carsListBlock = new CarsBlock("div", "main-container").render();
+    this.container.append(carsListBlock);
   }
 
   renderFooter() {
@@ -41,7 +41,7 @@ class Main extends Component {
 
   render() {
     this.renderTitle();
-    this.renderCarBlock();
+    this.renderCars();
     this.renderFooter();
 
     return this.container;
