@@ -46,6 +46,12 @@ class Main extends Component {
 
     return this.container;
   }
+
+  hide() {
+    this.container.innerHTML = "";
+
+    return this.container;
+  }
 }
 
 export { Main };

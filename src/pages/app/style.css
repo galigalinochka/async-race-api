@@ -57,6 +57,17 @@
   transform: scale(1.05);
 }
 
+.btn-non-active {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+ 
+}
+
+.button .btn-non-active {
+  background-color: #c9c0c0;
+}
+
 .header-container .button,
 .buttons-container #race-button,
 .buttons-container #reset-button {
@@ -70,6 +81,10 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
+}
+
+.non-active {
+  display: none;
 }
 
 .input-block,
