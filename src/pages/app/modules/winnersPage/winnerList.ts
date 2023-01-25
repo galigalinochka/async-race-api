@@ -24,6 +24,7 @@ class WinList extends Component {
         elem.time
       );
       this.container.append(carHTML.render());
+      console.log(this.container);
     });
   }
 

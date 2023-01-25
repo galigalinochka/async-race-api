@@ -12,7 +12,7 @@ class WinnersPage extends Component {
 
   renderTitle() {
     const title = document.createElement("h2");
-    title.innerText = `Winners (${100})`;
+    title.innerText = `Winners (${2})`;
     const subTitle = document.createElement("h3");
     subTitle.innerText = "Page #1";
 

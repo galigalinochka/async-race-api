@@ -82,8 +82,8 @@ export class CarElement extends Component {
     carImg.className = "car-img";
     carImg.innerHTML = carInnerHTML;
 
-    const g = carImg.getElementsByTagName("g")[0];
-    g.style.fill = this.color;
+    const path = carImg.getElementsByTagName("path")[0];
+    path.style.fill = this.color;
 
     return carImg;
   }

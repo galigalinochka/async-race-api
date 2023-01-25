@@ -43,4 +43,17 @@ export class API {
 
     return { winner };
   };
+
+  static createNewCar = async (car: ICar) => {
+    const response = await fetch(`${API.garage}`, {
+      method: API.Methods.POST,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(car),
+    });
+    const newCar: ICar = await response.json();
+
+    return newCar;
+  };
 }

@@ -1,4 +1,5 @@
 import { Component } from "./components";
+import { API } from "../../pages/app/modules/API";
 
 class CreateElem {
   element: HTMLElement | HTMLInputElement;
@@ -78,6 +79,21 @@ class InputBlock extends Component {
     this.container.append(this.input);
     this.container.append(this.inputColor);
     this.container.append(this.button);
+
+    this.button.addEventListener("click", () => {
+      if (this.input.value) {
+        const newName = this.input.value;
+        const newColor = this.inputColor.value;
+        console.log(newColor);
+        const car = { name: newName, color: newColor };
+        API.createNewCar(car);
+
+        this.input.value = "";
+        this.inputColor.value = "#ffffff";
+
+        window.dispatchEvent(new Event("updatePage"));
+      }
+    });
 
     return this.container;
   }

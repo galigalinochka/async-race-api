@@ -9,17 +9,20 @@ export enum Sort {
 
 class WinBlock extends Component {
   winList: WinList;
+  total: number;
 
   constructor(tagName: string, className: string) {
     super(tagName, className);
     this.winList = new WinList("div", "win-list-container", []);
+    this.total = 0;
   }
 
   createWinList = async () => {
     const { winners, total } = await API.getWinners();
     this.winList = new WinList("div", "win-list-container", winners);
     this.container.append(this.winList.render());
-    console.log(total);
+
+    return { winners, total };
   };
 
   render() {
