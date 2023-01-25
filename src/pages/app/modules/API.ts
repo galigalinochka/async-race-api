@@ -56,4 +56,15 @@ export class API {
 
     return newCar;
   };
+
+  static deleteCar = async (id: number) => {
+    await fetch(`${API.garage}/${id}`, {
+      method: API.Methods.DELETE,
+    });
+  };
+
+  static deleteAllCars = async () => {
+    const { cars } = await API.getCars();
+    cars.forEach(async ({ id }) => await API.deleteCar(Number(id)));
+  };
 }

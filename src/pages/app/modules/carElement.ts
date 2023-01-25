@@ -1,7 +1,7 @@
-//import { API } from "./API";
 import { Component } from "../../../general/components/components";
 import { Button } from "../../../general/components/ui";
 import { carInnerHTML, flagInnerHTML } from "../../../general/components/car";
+import { API } from "./API";
 
 export class CarElement extends Component {
   id: string;
@@ -10,8 +10,6 @@ export class CarElement extends Component {
   stopButton: HTMLElement;
   startButton: HTMLElement;
   image!: HTMLElement | null;
-  //defaultPosition = 100;
-  //animationId = 0;
 
   static buttonText = {
     remove: "REMOVE",
@@ -51,6 +49,11 @@ export class CarElement extends Component {
       CarElement.buttonText.remove
     ).render();
     removeButton.classList.add("button");
+    removeButton.addEventListener("click", async () => {
+      await API.deleteCar(+this.id);
+      console.log("deleted");
+    });
+
     const selectButton = new Button(
       "button",
       "button-select",

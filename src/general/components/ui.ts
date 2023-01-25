@@ -90,8 +90,6 @@ class InputBlock extends Component {
 
         this.input.value = "";
         this.inputColor.value = "#ffffff";
-
-        window.dispatchEvent(new Event("updatePage"));
       }
     });
 
