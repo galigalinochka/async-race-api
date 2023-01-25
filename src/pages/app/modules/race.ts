@@ -1,7 +1,5 @@
 class Race {
-  constructor() {
-
-  }
+  constructor() {}
 }
 
 export { Race };

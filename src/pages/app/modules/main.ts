@@ -3,14 +3,16 @@ import { CarsBlock } from "./carsBlock";
 import { Button } from "../../../general/components/ui";
 
 class Main extends Component {
+  carsListBlock: CarsBlock;
   constructor(tagName: string, className: string) {
     super(tagName, className);
+    this.carsListBlock = new CarsBlock("div", "main-container");
   }
 
   renderTitle() {
     const title = document.createElement("h2");
-    title.innerText = `Garage (${104})`;
-
+    title.innerText = `Garage (${this.carsListBlock.totalCount})`;
+    console.log(this.carsListBlock);
     const subTitle = document.createElement("h3");
     subTitle.innerText = "Page #1";
 
@@ -19,8 +21,7 @@ class Main extends Component {
   }
 
   renderCars() {
-    const carsListBlock = new CarsBlock("div", "main-container").render();
-    this.container.append(carsListBlock);
+    this.container.append(this.carsListBlock.render());
   }
 
   renderFooter() {
@@ -43,12 +44,6 @@ class Main extends Component {
     this.renderTitle();
     this.renderCars();
     this.renderFooter();
-
-    return this.container;
-  }
-
-  hide() {
-    this.container.innerHTML = "";
 
     return this.container;
   }

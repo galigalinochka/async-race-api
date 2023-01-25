@@ -94,6 +94,8 @@ class UpdateInput extends InputBlock {
 
     this.input.className = UpdateCarProps.className;
     this.input.placeholder = "";
+    this.input.disabled = true;
+    this.inputColor.disabled = true;
     this.button = new Button(
       "button",
       "button",

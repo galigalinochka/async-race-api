@@ -8,7 +8,7 @@ version="1.1"
 id="svg5332"
 viewBox="0 0 256.00007 256.00002"
 height="72.248894mm"
-width="72.248909mm">
+width="40mm">
 <title
   id="title7394">Car</title>
 <defs

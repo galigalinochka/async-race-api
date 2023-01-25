@@ -33,14 +33,13 @@ class Header extends Component {
           settongsContainer.classList.add("non-active");
           mainContainer.classList.add("non-active");
           (<HTMLElement>e.target).classList.add("btn-non-active");
-          //получаем контейнер страницы winners
-          //const container = document.querySelector(".container") as HTMLElement;
+          const winnersPage = document.querySelector(".winners") as HTMLElement;
+          winnersPage.classList.add("active");
         } else if ((<HTMLElement>e.target).id === "garage") {
-          //const winnersPage = document.querySelector(".white") as HTMLElement;
+          const winnersPage = document.querySelector(".winners") as HTMLElement;
           settongsContainer.classList.remove("non-active");
           mainContainer.classList.remove("non-active");
-          //winnersPage.classList.add("non-active");
-          //получаем контейнер страницы winners и добавляем ему класс нон-актив
+          winnersPage.classList.remove("active");
           winnersBtn.classList.remove("btn-non-active");
         }
       };
